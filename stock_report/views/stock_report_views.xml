@@ -14,9 +14,9 @@
                                 <t t-else="">
                                     <t t-set="qty" t-value="1"/>
                                 </t>
-                                <t t-foreach="range(qty)" t-as="item">
+                                <t t-foreach="range(Math.ceil(qty * move_line.product.etiquetas ))" t-as="item">
                                     <t t-translation="off">
-                                         <t t-if="item % 2 != 1">
+                                         <t>
                                           <div style="display: inline-table; height: 15rem; width: 100%;">
                                            <table class="table table-bordered" style="border: 2px solid black;">
                                             <th class="table-active text-left" style="height:16rem;">
